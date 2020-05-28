@@ -7,14 +7,19 @@
     </head>
     <body>
         <div id="vue-app">
-            <h1>Looping through list</h1>
-            <ul>
-                <li v-for="(name, index) in names">{{index}}.{{name}}</li>
-            </ul>
-            <ul>
-                <li v-for="(greet, index) in greets">{{index}}.{{greet.name}} - {{greet.age}}</li>
-            </ul>
-            
+            <!-- bag-image -->
+            <div id="bag" :class="{burst:ended}">
+
+            </div>
+            <!-- bag-health -->
+            <div id="bag-health">
+                <div :style="{width:health + '%'}"></div>
+            </div>
+            <!-- bag-controls -->
+            <div id="controls">
+                <button @click="punch" v-show="!ended">Punch</button>
+                <button @click="restart">Restart</button>
+            </div>
         </div>
         <script src="app.js"></script>
     </body>

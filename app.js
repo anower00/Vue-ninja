@@ -1,15 +1,20 @@
 new Vue({
     el:'#vue-app',
     data:{
-        names : ['Antut','Bntut','Cntut', 'Dntut'],
-        greets: [
-            { name: 'Antut', age: 12},
-            { name: 'Bntut', age: 22},
-            { name: 'Cntut', age: 28},
-        ]
+        health: 100,
+        ended: false,
     },
     methods:{
-     
+        punch: function () {
+            this.health -= 10;
+            if (this.health <= 0) {
+                this.ended = true;
+            }
+        },
+        restart: function () {
+            this.health = 100;
+            this.ended = false
+        }
     },
     computed:{
     
