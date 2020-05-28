@@ -6,16 +6,19 @@ new Vue({
         y:0
     },
     methods:{
-        add : function add(inc) {
+        add : function(inc) {
             this.age+=inc;
         },
-        subtract : function add(dec) {
+        subtract : function(dec) {
             this.age-=dec;
         },
-        updateXY: function (event) {
+        updateXY : function(event) {
             // console.log(event)
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+        click: function() {
+            alert('You click me');
         }
     }
 });
