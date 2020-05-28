@@ -7,15 +7,14 @@
     </head>
     <body>
         <div id="vue-app">
-            <h1>Conditionals</h1>
-            <button @click="error = !error">Toggle Error</button>
-            <button @click="success = !success ">Toggle Success</button>
+            <h1>Looping through list</h1>
+            <ul>
+                <li v-for="(name, index) in names">{{index}}.{{name}}</li>
+            </ul>
+            <ul>
+                <li v-for="(greet, index) in greets">{{index}}.{{greet.name}} - {{greet.age}}</li>
+            </ul>
             
-            <!-- <p v-if="error">There has been error</p>
-            <p v-else-if="success">There has been Success</p> -->
-
-            <p v-show="error">There has been error</p>
-            <p v-show="success">There has been Success</p>
         </div>
         <script src="app.js"></script>
     </body>
