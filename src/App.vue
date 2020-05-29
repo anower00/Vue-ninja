@@ -1,20 +1,24 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <ninjas></ninjas>  
+     <app-header></app-header>
+     <app-ninja></app-ninja>
+     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import Ninja from './Ninja.vue'
-
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import Ninjas from './components/Ninjas.vue'
 export default {
   components:{
-    'ninjas':Ninja
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-ninja': Ninjas,
   },
   data () {
     return {
-     title: 'Ninja App'
+    
     }
   }
 }
